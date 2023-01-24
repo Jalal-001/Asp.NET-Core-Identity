@@ -2178,11 +2178,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Calal.Xaliqov\\Desktop\\AuthApi-master\\authapi.entity\\authapi.entity.csproj",
+      "projectUniqueName": "C:\\Users\\Calal.Xaliqov\\Desktop\\AuthApi\\authapi.entity\\authapi.entity.csproj",
       "projectName": "authapi.entity",
-      "projectPath": "c:\\Users\\Calal.Xaliqov\\Desktop\\AuthApi-master\\authapi.entity\\authapi.entity.csproj",
+      "projectPath": "C:\\Users\\Calal.Xaliqov\\Desktop\\AuthApi\\authapi.entity\\authapi.entity.csproj",
       "packagesPath": "C:\\Users\\Calal.Xaliqov\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Calal.Xaliqov\\Desktop\\AuthApi-master\\authapi.entity\\obj\\",
+      "outputPath": "C:\\Users\\Calal.Xaliqov\\Desktop\\AuthApi\\authapi.entity\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\DevExpress 21.1\\Components\\Offline Packages"

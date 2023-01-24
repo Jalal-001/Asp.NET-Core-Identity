@@ -1,0 +1,14 @@
+C:\Users\Calal.Xaliqov\Desktop\AuthApi\authapi.data\bin\Debug\net7.0\authapi.data.deps.json
+C:\Users\Calal.Xaliqov\Desktop\AuthApi\authapi.data\bin\Debug\net7.0\authapi.data.runtimeconfig.json
+C:\Users\Calal.Xaliqov\Desktop\AuthApi\authapi.data\bin\Debug\net7.0\authapi.data.dll
+C:\Users\Calal.Xaliqov\Desktop\AuthApi\authapi.data\bin\Debug\net7.0\authapi.data.pdb
+C:\Users\Calal.Xaliqov\Desktop\AuthApi\authapi.data\obj\Debug\net7.0\authapi.data.csproj.AssemblyReference.cache
+C:\Users\Calal.Xaliqov\Desktop\AuthApi\authapi.data\obj\Debug\net7.0\authapi.data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Calal.Xaliqov\Desktop\AuthApi\authapi.data\obj\Debug\net7.0\authapi.data.AssemblyInfoInputs.cache
+C:\Users\Calal.Xaliqov\Desktop\AuthApi\authapi.data\obj\Debug\net7.0\authapi.data.AssemblyInfo.cs
+C:\Users\Calal.Xaliqov\Desktop\AuthApi\authapi.data\obj\Debug\net7.0\authapi.data.csproj.CoreCompileInputs.cache
+C:\Users\Calal.Xaliqov\Desktop\AuthApi\authapi.data\obj\Debug\net7.0\authapi.data.dll
+C:\Users\Calal.Xaliqov\Desktop\AuthApi\authapi.data\obj\Debug\net7.0\refint\authapi.data.dll
+C:\Users\Calal.Xaliqov\Desktop\AuthApi\authapi.data\obj\Debug\net7.0\authapi.data.pdb
+C:\Users\Calal.Xaliqov\Desktop\AuthApi\authapi.data\obj\Debug\net7.0\authapi.data.genruntimeconfig.cache
+C:\Users\Calal.Xaliqov\Desktop\AuthApi\authapi.data\obj\Debug\net7.0\ref\authapi.data.dll
