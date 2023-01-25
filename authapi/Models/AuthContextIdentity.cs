@@ -12,6 +12,6 @@ namespace authapi.Models
         {
             optionsBuilder.UseSqlite("Data Source=AuthDb");
         }
-        public DbSet<AppUser>Users{get;set;}
+        public DbSet<AppUser>Users{get;set;} //buna baxarsan
     }
 }
