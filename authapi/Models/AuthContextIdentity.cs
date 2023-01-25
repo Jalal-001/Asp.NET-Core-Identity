@@ -8,9 +8,10 @@ namespace authapi.Models
 {
     public class AuthContextIdentity:IdentityDbContext<AppUser>
     {
-        public AuthContextIdentity(DbContextOptions<AuthContext> dbContext):base(dbContext)
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            
+            optionsBuilder.UseSqlite("Data Source=AuthDb");
         }
+        public DbSet<AppUser>Users{get;set;}
     }
 }

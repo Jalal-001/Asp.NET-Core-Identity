@@ -2377,7 +2377,8 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "7.0.2",
           "Microsoft.EntityFrameworkCore.Sqlite": "7.0.2",
-          "Microsoft.EntityFrameworkCore.Tools.DotNet": "2.0.3"
+          "Microsoft.EntityFrameworkCore.Tools.DotNet": "2.0.3",
+          "authapi.entity": "1.0.0"
         },
         "compile": {
           "bin/placeholder/authapi.data.dll": {}
