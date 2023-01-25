@@ -1,5 +1,6 @@
 using System;
 using Microsoft.EntityFrameworkCore;
+using authapi.entity;
 
 namespace authapi.data.Concrete
 {
@@ -9,5 +10,6 @@ namespace authapi.data.Concrete
         {
             
         }
+        public DbSet<AppUser>Users{get;set;}
     }
 }

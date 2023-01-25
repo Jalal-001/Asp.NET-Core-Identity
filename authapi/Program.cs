@@ -1,6 +1,5 @@
 using authapi.data.Concrete;
 using authapi.entity;
-using authapi.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -20,5 +19,5 @@ app.UseAuthentication();
 app.UseStaticFiles();
 
 app.MapGet("/", () => "Hello World!");
-
+                              
 app.Run();

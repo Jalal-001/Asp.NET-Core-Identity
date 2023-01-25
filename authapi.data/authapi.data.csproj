@@ -20,4 +20,8 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.3" />
   </ItemGroup>
 
+<ItemGroup>
+  <ProjectReference Include="..\authapi.entity\authapi.entity.csproj" />
+</ItemGroup>
+
 </Project>
