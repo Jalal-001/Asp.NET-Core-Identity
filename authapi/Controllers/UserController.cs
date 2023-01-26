@@ -35,7 +35,7 @@ namespace authapi.Controllers
                     Email=model.Email,
                 };
                 
-                IdentityResult result= await _userManager.CreateAsync(appUser,model.Password);
+                var  result= await _userManager.CreateAsync(appUser,model.Password);
                 if(result.Succeeded)
                 {
                     return RedirectToAction("Index");

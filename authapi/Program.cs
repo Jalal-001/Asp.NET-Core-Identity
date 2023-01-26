@@ -12,7 +12,20 @@ _configuration=builder.Configuration;
 
 builder.Services.AddDbContext<AuthContextIdentity>(options => options.UseSqlite(_configuration.GetConnectionString("Sqlite")));
 builder.Services.AddIdentity<AppUser,AppRole>().AddEntityFrameworkStores<AuthContextIdentity>();
- builder.Services.AddMvc();
+builder.Services.AddMvc();
+
+
+
+
+
+
+
+
+
+
+
+
+
 var app = builder.Build();
 
 app.UseAuthentication();
@@ -25,6 +38,8 @@ app.UseRouting();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=User}/{action=Index}/{id?}"
+
+    );
 
 app.Run();

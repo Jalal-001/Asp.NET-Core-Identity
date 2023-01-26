@@ -8,8 +8,8 @@ namespace authapi.Models.ViewModels
         [Required(ErrorMessage ="İstifadəçi adı boş ola bilməz!")]
         [StringLength(15,MinimumLength =3,ErrorMessage ="İstifadəçi adı 3 ilə 15 simvoldan ibarət olmalıdır!")]
         [Display(Name ="İstifadəçi adı")]
-
         public string Username { get; set; }
+        
         [Required(ErrorMessage ="Email boş ola bilməz!")]
         [EmailAddress(ErrorMessage ="Format düzgün deyil!")]
         [Display(Name ="Email")]

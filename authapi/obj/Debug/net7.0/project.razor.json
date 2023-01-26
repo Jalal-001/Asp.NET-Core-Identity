@@ -18645,6 +18645,11 @@
   "RootNamespace": "authapi",
   "Documents": [
     {
+      "FilePath": "c:\\Users\\Calal.Xaliqov\\Desktop\\AuthApi\\authapi\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Calal.Xaliqov\\Desktop\\AuthApi\\authapi\\Views\\User\\SignIn.cshtml",
       "TargetPath": "Views\\User\\SignIn.cshtml",
       "FileKind": "mvc"

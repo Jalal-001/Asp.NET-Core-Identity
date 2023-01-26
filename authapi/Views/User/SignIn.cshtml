@@ -1,8 +1,4 @@
-
-@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
-@addTagHelper *, AuthoringTagHelpers
-
-y
+@model AppUserViewModel
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,19 +12,26 @@ y
     <div class="container">
         <div class="row">
             <div class="col-md-8">
-                <form>
+                <form asp-controller="User" asp-action="SignIn" method="post">
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">y</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <label asp-for="@Model.Username" class="form-label"></label>
+                        <input asp-for="@Model.Username" type="text" class="form-control">
+                        <span asp-validation-for="Username" class="text-danger"></span>
+                    </div>
+                     <div class="mb-3">
+                        <label asp-for="@Model.Email" class="form-label"></label>
+                        <input asp-for="@Model.Email" type="email" class="form-control" aria-describedby="emailHelp">
                         <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        <span asp-validation-for="Username" class="text-danger"></span>
                     </div>
                     <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
+                        <label asp-for="@Model.Password" class="form-label"></label>
+                        <input asp-for="@Model.Password" type="password" class="form-control" >
+                        <span asp-validation-for="Username" class="text-danger"></span>
                     </div>
                     <div class="mb-3 form-check">
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        <label class="form-check-label">Check me out</label>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>      
