@@ -1,7 +1,6 @@
 using authapi.data.Concrete;
 using authapi.entity;
-using authapi.Models;
-using Microsoft.AspNetCore.Identity;
+using authapi.Models.Context;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -17,8 +16,15 @@ builder.Services.AddIdentity<AppUser,AppRole>().AddEntityFrameworkStores<AuthCon
 var app = builder.Build();
 
 app.UseAuthentication();
+
 app.UseStaticFiles();
 
-app.MapGet("/", () => "Hello World!");
-                              
+app.UseHttpsRedirection();
+
+app.UseRouting();
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
+
 app.Run();

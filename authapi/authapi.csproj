@@ -23,10 +23,8 @@
   </ItemGroup>
   
 <ItemGroup>
-  <ProjectReference Include="..\authapi.data\Concrete\AuthContext" />
   <ProjectReference Include="..\authapi.data\authapi.data.csproj" />
 
-  <ProjectReference Include="..\authapi.entity\AppUser" />
   <ProjectReference Include="..\authapi.entity\authapi.entity.csproj" />
   </ItemGroup>
 

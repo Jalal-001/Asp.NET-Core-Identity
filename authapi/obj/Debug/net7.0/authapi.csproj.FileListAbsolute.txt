@@ -134,3 +134,5 @@ C:\Users\Calal.Xaliqov\Desktop\AuthApi\authapi\bin\Debug\net7.0\authapi.entity.p
 C:\Users\Calal.Xaliqov\Desktop\AuthApi\authapi\obj\Debug\net7.0\authapi.csproj.CopyComplete
 C:\Users\Calal.Xaliqov\Desktop\AuthApi\authapi\bin\Debug\net7.0\dotnet-ef.dll
 C:\Users\Calal.Xaliqov\Desktop\AuthApi\authapi\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\Calal.Xaliqov\Desktop\AuthApi\authapi\obj\Debug\net7.0\authapi.RazorAssemblyInfo.cache
+C:\Users\Calal.Xaliqov\Desktop\AuthApi\authapi\obj\Debug\net7.0\authapi.RazorAssemblyInfo.cs
