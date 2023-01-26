@@ -1,17 +1,15 @@
 using System;
-using authapi.data.Concrete;
 using authapi.entity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace authapi.Models
 {
-    public class AuthContextIdentity:IdentityDbContext<AppUser>
+    public class AuthContextIdentity:IdentityDbContext<AppUser,AppRole,string>
     {
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public AuthContextIdentity(DbContextOptions<AuthContextIdentity>options):base(options)
         {
-            optionsBuilder.UseSqlite("Data Source=AuthDb");
+            
         }
-        public DbSet<AppUser>Users{get;set;} //buna baxarsan
     }
 }

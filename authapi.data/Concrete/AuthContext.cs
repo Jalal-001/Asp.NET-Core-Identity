@@ -6,7 +6,7 @@ namespace authapi.data.Concrete
 {
     public class AuthContext:DbContext
     {
-         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite("Server=AuthDb");
         }
