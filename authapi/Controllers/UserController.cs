@@ -35,11 +35,11 @@ namespace authapi.Controllers
                     Email=model.Email,
                 };
                 
-                var  result= await _userManager.CreateAsync(appUser,model.Password);
+                IdentityResult result= await _userManager.CreateAsync(appUser,model.Password);
                 if(result.Succeeded)
-                {
                     return RedirectToAction("Index");
-                }
+                 result.Errors.ToList().ForEach(e=>ModelState.AddModelError(e.Code,e.Description));
+                 Console.WriteLine(result);
             }
             return View();
         }
