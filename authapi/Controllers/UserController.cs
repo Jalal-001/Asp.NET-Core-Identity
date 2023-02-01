@@ -13,6 +13,7 @@ namespace authapi.Controllers
         {
             _userManager=userManager;
         }
+
         public IActionResult Index()
         {
             return View(_userManager.Users);
@@ -38,8 +39,8 @@ namespace authapi.Controllers
                 IdentityResult result= await _userManager.CreateAsync(appUser,model.Password);
                 if(result.Succeeded)
                     return RedirectToAction("Index");
-                 result.Errors.ToList().ForEach(e=>ModelState.AddModelError(e.Code,e.Description));
-                 Console.WriteLine(result);
+                result.Errors.ToList().ForEach(e=>ModelState.AddModelError(e.Code,e.Description));
+                Console.WriteLine(result);
             }
             return View();
         }

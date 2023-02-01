@@ -18,7 +18,9 @@ builder.Services.AddIdentity<AppUser,AppRole>(o=>{
     o.Password.RequireUppercase=false;
     o.Password.RequireLowercase=false;
     o.Password.RequireNonAlphanumeric=false;
-}).AddPasswordValidator<CustomPasswordValidation>().AddEntityFrameworkStores<AuthContextIdentity>();
+}).AddPasswordValidator<CustomPasswordValidation>()
+.AddUserValidator<CustomUserValidation>()
+.AddEntityFrameworkStores<AuthContextIdentity>();
 
 builder.Services.AddMvc();
 
