@@ -12,3 +12,17 @@ C:\Users\Calal.Xaliqov\Desktop\AuthApi\authapi.entity\obj\Debug\net7.0\refint\au
 C:\Users\Calal.Xaliqov\Desktop\AuthApi\authapi.entity\obj\Debug\net7.0\authapi.entity.pdb
 C:\Users\Calal.Xaliqov\Desktop\AuthApi\authapi.entity\obj\Debug\net7.0\authapi.entity.genruntimeconfig.cache
 C:\Users\Calal.Xaliqov\Desktop\AuthApi\authapi.entity\obj\Debug\net7.0\ref\authapi.entity.dll
+C:\Users\Lenovo\Desktop\AuthApi\authapi.entity\bin\Debug\net7.0\authapi.entity.deps.json
+C:\Users\Lenovo\Desktop\AuthApi\authapi.entity\bin\Debug\net7.0\authapi.entity.runtimeconfig.json
+C:\Users\Lenovo\Desktop\AuthApi\authapi.entity\bin\Debug\net7.0\authapi.entity.dll
+C:\Users\Lenovo\Desktop\AuthApi\authapi.entity\bin\Debug\net7.0\authapi.entity.pdb
+C:\Users\Lenovo\Desktop\AuthApi\authapi.entity\obj\Debug\net7.0\authapi.entity.csproj.AssemblyReference.cache
+C:\Users\Lenovo\Desktop\AuthApi\authapi.entity\obj\Debug\net7.0\authapi.entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Desktop\AuthApi\authapi.entity\obj\Debug\net7.0\authapi.entity.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Desktop\AuthApi\authapi.entity\obj\Debug\net7.0\authapi.entity.AssemblyInfo.cs
+C:\Users\Lenovo\Desktop\AuthApi\authapi.entity\obj\Debug\net7.0\authapi.entity.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\AuthApi\authapi.entity\obj\Debug\net7.0\authapi.entity.dll
+C:\Users\Lenovo\Desktop\AuthApi\authapi.entity\obj\Debug\net7.0\refint\authapi.entity.dll
+C:\Users\Lenovo\Desktop\AuthApi\authapi.entity\obj\Debug\net7.0\authapi.entity.pdb
+C:\Users\Lenovo\Desktop\AuthApi\authapi.entity\obj\Debug\net7.0\authapi.entity.genruntimeconfig.cache
+C:\Users\Lenovo\Desktop\AuthApi\authapi.entity\obj\Debug\net7.0\ref\authapi.entity.dll
