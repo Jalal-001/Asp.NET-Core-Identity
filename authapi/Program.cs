@@ -12,6 +12,7 @@ IConfiguration _configuration;
 _configuration = builder.Configuration;
 
 builder.Services.AddDbContext<AuthContextIdentity>(options => options.UseSqlite(_configuration.GetConnectionString("Sqlite")));
+
 builder.Services.AddIdentity<AppUser, AppRole>(o =>
 {
     o.Password.RequiredLength = 5;
