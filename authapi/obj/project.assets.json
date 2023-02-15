@@ -849,7 +849,7 @@
             "related": ".xml"
           },
           "ref/netcoreapp2.0/System.Collections.dll": {
-            "related": ".Concurrent.xml;.xml;.Immutable.xml;.NonGeneric.xml;.Specialized.xml"
+            "related": ".Concurrent.xml;.Immutable.xml;.NonGeneric.xml;.Specialized.xml;.xml"
           },
           "ref/netcoreapp2.0/System.ComponentModel.Annotations.dll": {
             "related": ".xml"
@@ -866,7 +866,7 @@
             "related": ".xml"
           },
           "ref/netcoreapp2.0/System.ComponentModel.dll": {
-            "related": ".Annotations.xml;.EventBasedAsync.xml;.xml;.Primitives.xml;.TypeConverter.xml"
+            "related": ".Annotations.xml;.EventBasedAsync.xml;.Primitives.xml;.TypeConverter.xml;.xml"
           },
           "ref/netcoreapp2.0/System.Configuration.dll": {},
           "ref/netcoreapp2.0/System.Console.dll": {
@@ -944,7 +944,7 @@
             "related": ".xml"
           },
           "ref/netcoreapp2.0/System.IO.FileSystem.dll": {
-            "related": ".DriveInfo.xml;.xml;.Primitives.xml;.Watcher.xml"
+            "related": ".DriveInfo.xml;.Primitives.xml;.Watcher.xml;.xml"
           },
           "ref/netcoreapp2.0/System.IO.IsolatedStorage.dll": {
             "related": ".xml"
@@ -959,7 +959,7 @@
             "related": ".xml"
           },
           "ref/netcoreapp2.0/System.IO.dll": {
-            "related": ".Compression.xml;.Compression.ZipFile.xml;.FileSystem.DriveInfo.xml;.FileSystem.xml;.FileSystem.Primitives.xml;.FileSystem.Watcher.xml;.xml;.IsolatedStorage.xml;.MemoryMappedFiles.xml;.Pipes.xml;.UnmanagedMemoryStream.xml"
+            "related": ".Compression.xml;.Compression.ZipFile.xml;.FileSystem.DriveInfo.xml;.FileSystem.Primitives.xml;.FileSystem.Watcher.xml;.FileSystem.xml;.IsolatedStorage.xml;.MemoryMappedFiles.xml;.Pipes.xml;.UnmanagedMemoryStream.xml;.xml"
           },
           "ref/netcoreapp2.0/System.Linq.Expressions.dll": {
             "related": ".xml"
@@ -971,7 +971,7 @@
             "related": ".xml"
           },
           "ref/netcoreapp2.0/System.Linq.dll": {
-            "related": ".Expressions.xml;.xml;.Queryable.xml;.Parallel.xml"
+            "related": ".Expressions.xml;.Parallel.xml;.Queryable.xml;.xml"
           },
           "ref/netcoreapp2.0/System.Net.Http.dll": {
             "related": ".xml"
@@ -1043,7 +1043,7 @@
             "related": ".xml"
           },
           "ref/netcoreapp2.0/System.Reflection.Emit.dll": {
-            "related": ".xml;.ILGeneration.xml;.Lightweight.xml"
+            "related": ".ILGeneration.xml;.Lightweight.xml;.xml"
           },
           "ref/netcoreapp2.0/System.Reflection.Extensions.dll": {
             "related": ".xml"
@@ -1058,7 +1058,7 @@
             "related": ".xml"
           },
           "ref/netcoreapp2.0/System.Reflection.dll": {
-            "related": ".DispatchProxy.xml;.Extensions.xml;.Emit.xml;.Emit.ILGeneration.xml;.Emit.Lightweight.xml;.xml;.Metadata.xml;.Primitives.xml;.TypeExtensions.xml"
+            "related": ".DispatchProxy.xml;.Emit.ILGeneration.xml;.Emit.Lightweight.xml;.Emit.xml;.Extensions.xml;.Metadata.xml;.Primitives.xml;.TypeExtensions.xml;.xml"
           },
           "ref/netcoreapp2.0/System.Resources.Reader.dll": {
             "related": ".xml"
@@ -1085,7 +1085,7 @@
             "related": ".xml"
           },
           "ref/netcoreapp2.0/System.Runtime.InteropServices.dll": {
-            "related": ".xml;.RuntimeInformation.xml;.WindowsRuntime.xml"
+            "related": ".RuntimeInformation.xml;.WindowsRuntime.xml;.xml"
           },
           "ref/netcoreapp2.0/System.Runtime.Loader.dll": {
             "related": ".xml"
@@ -1106,10 +1106,10 @@
             "related": ".xml"
           },
           "ref/netcoreapp2.0/System.Runtime.Serialization.dll": {
-            "related": ".Formatters.xml;.Xml.xml;.Json.xml;.Primitives.xml"
+            "related": ".Formatters.xml;.Json.xml;.Primitives.xml;.Xml.xml"
           },
           "ref/netcoreapp2.0/System.Runtime.dll": {
-            "related": ".CompilerServices.VisualC.xml;.Extensions.xml;.Handles.xml;.xml;.InteropServices.xml;.InteropServices.RuntimeInformation.xml;.InteropServices.WindowsRuntime.xml;.Loader.xml;.Numerics.xml;.Serialization.Formatters.xml;.Serialization.Xml.xml;.Serialization.Json.xml;.Serialization.Primitives.xml"
+            "related": ".CompilerServices.VisualC.xml;.Extensions.xml;.Handles.xml;.InteropServices.RuntimeInformation.xml;.InteropServices.WindowsRuntime.xml;.InteropServices.xml;.Loader.xml;.Numerics.xml;.Serialization.Formatters.xml;.Serialization.Json.xml;.Serialization.Primitives.xml;.Serialization.Xml.xml;.xml"
           },
           "ref/netcoreapp2.0/System.Security.Claims.dll": {
             "related": ".xml"
@@ -1136,7 +1136,7 @@
             "related": ".xml"
           },
           "ref/netcoreapp2.0/System.Security.dll": {
-            "related": ".Claims.xml;.Cryptography.Algorithms.xml;.Cryptography.Csp.xml;.Cryptography.Encoding.xml;.Cryptography.X509Certificates.xml;.Cryptography.Primitives.xml;.Principal.xml;.SecureString.xml"
+            "related": ".Claims.xml;.Cryptography.Algorithms.xml;.Cryptography.Csp.xml;.Cryptography.Encoding.xml;.Cryptography.Primitives.xml;.Cryptography.X509Certificates.xml;.Principal.xml;.SecureString.xml"
           },
           "ref/netcoreapp2.0/System.ServiceModel.Web.dll": {},
           "ref/netcoreapp2.0/System.ServiceProcess.dll": {},
@@ -1162,7 +1162,7 @@
             "related": ".xml"
           },
           "ref/netcoreapp2.0/System.Threading.Tasks.dll": {
-            "related": ".Dataflow.xml;.Extensions.xml;.xml;.Parallel.xml"
+            "related": ".Dataflow.xml;.Extensions.xml;.Parallel.xml;.xml"
           },
           "ref/netcoreapp2.0/System.Threading.Thread.dll": {
             "related": ".xml"
@@ -1174,7 +1174,7 @@
             "related": ".xml"
           },
           "ref/netcoreapp2.0/System.Threading.dll": {
-            "related": ".xml;.Overlapped.xml;.Tasks.Dataflow.xml;.Tasks.Extensions.xml;.Tasks.xml;.Tasks.Parallel.xml;.Thread.xml;.ThreadPool.xml;.Timer.xml"
+            "related": ".Overlapped.xml;.Tasks.Dataflow.xml;.Tasks.Extensions.xml;.Tasks.Parallel.xml;.Tasks.xml;.Thread.xml;.ThreadPool.xml;.Timer.xml;.xml"
           },
           "ref/netcoreapp2.0/System.Transactions.Local.dll": {
             "related": ".xml"
@@ -1213,10 +1213,10 @@
             "related": ".xml"
           },
           "ref/netcoreapp2.0/System.Xml.dll": {
-            "related": ".XDocument.xml;.XmlDocument.xml;.XmlSerializer.xml;.XPath.XDocument.xml;.XPath.xml;.ReaderWriter.xml"
+            "related": ".ReaderWriter.xml;.XDocument.xml;.XmlDocument.xml;.XmlSerializer.xml;.XPath.XDocument.xml;.XPath.xml"
           },
           "ref/netcoreapp2.0/System.dll": {
-            "related": ".AppContext.xml;.Buffers.xml;.Collections.Concurrent.xml;.Collections.xml;.Collections.Immutable.xml;.Collections.NonGeneric.xml;.Collections.Specialized.xml;.ComponentModel.Annotations.xml;.ComponentModel.EventBasedAsync.xml;.ComponentModel.xml;.ComponentModel.Primitives.xml;.ComponentModel.TypeConverter.xml;.Console.xml;.Data.Common.xml;.Diagnostics.Contracts.xml;.Diagnostics.Debug.xml;.Diagnostics.DiagnosticSource.xml;.Diagnostics.FileVersionInfo.xml;.Diagnostics.Process.xml;.Diagnostics.StackTrace.xml;.Diagnostics.TextWriterTraceListener.xml;.Diagnostics.Tools.xml;.Diagnostics.TraceSource.xml;.Diagnostics.Tracing.xml;.Drawing.Primitives.xml;.Dynamic.Runtime.xml;.Globalization.Calendars.xml;.Globalization.Extensions.xml;.Globalization.xml;.Xml.XDocument.xml;.Xml.XmlDocument.xml;.Xml.XmlSerializer.xml;.Xml.XPath.XDocument.xml;.Xml.XPath.xml;.Xml.ReaderWriter.xml;.IO.Compression.xml;.IO.Compression.ZipFile.xml;.IO.FileSystem.DriveInfo.xml;.IO.FileSystem.xml;.IO.FileSystem.Primitives.xml;.IO.FileSystem.Watcher.xml;.IO.xml;.IO.IsolatedStorage.xml;.IO.MemoryMappedFiles.xml;.IO.Pipes.xml;.IO.UnmanagedMemoryStream.xml;.Linq.Expressions.xml;.Linq.xml;.Linq.Queryable.xml;.Linq.Parallel.xml;.Net.Http.xml;.Net.HttpListener.xml;.Net.Mail.xml;.Net.NameResolution.xml;.Net.NetworkInformation.xml;.Net.Ping.xml;.Net.Primitives.xml;.Net.Requests.xml;.Net.Security.xml;.Net.ServicePoint.xml;.Net.Sockets.xml;.Net.WebClient.xml;.Net.WebHeaderCollection.xml;.Net.WebProxy.xml;.Net.WebSockets.Client.xml;.Net.WebSockets.xml;.Numerics.Vectors.xml;.ObjectModel.xml;.Reflection.DispatchProxy.xml;.Reflection.Extensions.xml;.Reflection.Emit.xml;.Reflection.Emit.ILGeneration.xml;.Reflection.Emit.Lightweight.xml;.Reflection.xml;.Reflection.Metadata.xml;.Reflection.Primitives.xml;.Reflection.TypeExtensions.xml;.Resources.Reader.xml;.Resources.ResourceManager.xml;.Resources.Writer.xml;.Runtime.CompilerServices.VisualC.xml;.Runtime.Extensions.xml;.Runtime.Handles.xml;.Runtime.xml;.Runtime.InteropServices.xml;.Runtime.InteropServices.RuntimeInformation.xml;.Runtime.InteropServices.WindowsRuntime.xml;.Runtime.Loader.xml;.Runtime.Numerics.xml;.Runtime.Serialization.Formatters.xml;.Runtime.Serialization.Xml.xml;.Runtime.Serialization.Json.xml;.Runtime.Serialization.Primitives.xml;.Security.Claims.xml;.Security.Cryptography.Algorithms.xml;.Security.Cryptography.Csp.xml;.Security.Cryptography.Encoding.xml;.Security.Cryptography.X509Certificates.xml;.Security.Cryptography.Primitives.xml;.Security.Principal.xml;.Security.SecureString.xml;.Text.Encoding.Extensions.xml;.Text.Encoding.xml;.Text.RegularExpressions.xml;.Threading.xml;.Threading.Overlapped.xml;.Threading.Tasks.Dataflow.xml;.Threading.Tasks.Extensions.xml;.Threading.Tasks.xml;.Threading.Tasks.Parallel.xml;.Threading.Thread.xml;.Threading.ThreadPool.xml;.Threading.Timer.xml;.Transactions.Local.xml;.ValueTuple.xml;.Web.HttpUtility.xml"
+            "related": ".AppContext.xml;.Buffers.xml;.Collections.Concurrent.xml;.Collections.Immutable.xml;.Collections.NonGeneric.xml;.Collections.Specialized.xml;.Collections.xml;.ComponentModel.Annotations.xml;.ComponentModel.EventBasedAsync.xml;.ComponentModel.Primitives.xml;.ComponentModel.TypeConverter.xml;.ComponentModel.xml;.Console.xml;.Data.Common.xml;.Diagnostics.Contracts.xml;.Diagnostics.Debug.xml;.Diagnostics.DiagnosticSource.xml;.Diagnostics.FileVersionInfo.xml;.Diagnostics.Process.xml;.Diagnostics.StackTrace.xml;.Diagnostics.TextWriterTraceListener.xml;.Diagnostics.Tools.xml;.Diagnostics.TraceSource.xml;.Diagnostics.Tracing.xml;.Drawing.Primitives.xml;.Dynamic.Runtime.xml;.Globalization.Calendars.xml;.Globalization.Extensions.xml;.Globalization.xml;.IO.Compression.xml;.IO.Compression.ZipFile.xml;.IO.FileSystem.DriveInfo.xml;.IO.FileSystem.Primitives.xml;.IO.FileSystem.Watcher.xml;.IO.FileSystem.xml;.IO.IsolatedStorage.xml;.IO.MemoryMappedFiles.xml;.IO.Pipes.xml;.IO.UnmanagedMemoryStream.xml;.IO.xml;.Linq.Expressions.xml;.Linq.Parallel.xml;.Linq.Queryable.xml;.Linq.xml;.Net.Http.xml;.Net.HttpListener.xml;.Net.Mail.xml;.Net.NameResolution.xml;.Net.NetworkInformation.xml;.Net.Ping.xml;.Net.Primitives.xml;.Net.Requests.xml;.Net.Security.xml;.Net.ServicePoint.xml;.Net.Sockets.xml;.Net.WebClient.xml;.Net.WebHeaderCollection.xml;.Net.WebProxy.xml;.Net.WebSockets.Client.xml;.Net.WebSockets.xml;.Numerics.Vectors.xml;.ObjectModel.xml;.Reflection.DispatchProxy.xml;.Reflection.Emit.ILGeneration.xml;.Reflection.Emit.Lightweight.xml;.Reflection.Emit.xml;.Reflection.Extensions.xml;.Reflection.Metadata.xml;.Reflection.Primitives.xml;.Reflection.TypeExtensions.xml;.Reflection.xml;.Resources.Reader.xml;.Resources.ResourceManager.xml;.Resources.Writer.xml;.Runtime.CompilerServices.VisualC.xml;.Runtime.Extensions.xml;.Runtime.Handles.xml;.Runtime.InteropServices.RuntimeInformation.xml;.Runtime.InteropServices.WindowsRuntime.xml;.Runtime.InteropServices.xml;.Runtime.Loader.xml;.Runtime.Numerics.xml;.Runtime.Serialization.Formatters.xml;.Runtime.Serialization.Json.xml;.Runtime.Serialization.Primitives.xml;.Runtime.Serialization.Xml.xml;.Runtime.xml;.Security.Claims.xml;.Security.Cryptography.Algorithms.xml;.Security.Cryptography.Csp.xml;.Security.Cryptography.Encoding.xml;.Security.Cryptography.Primitives.xml;.Security.Cryptography.X509Certificates.xml;.Security.Principal.xml;.Security.SecureString.xml;.Text.Encoding.Extensions.xml;.Text.Encoding.xml;.Text.RegularExpressions.xml;.Threading.Overlapped.xml;.Threading.Tasks.Dataflow.xml;.Threading.Tasks.Extensions.xml;.Threading.Tasks.Parallel.xml;.Threading.Tasks.xml;.Threading.Thread.xml;.Threading.ThreadPool.xml;.Threading.Timer.xml;.Threading.xml;.Transactions.Local.xml;.ValueTuple.xml;.Web.HttpUtility.xml;.Xml.ReaderWriter.xml;.Xml.XDocument.xml;.Xml.XmlDocument.xml;.Xml.XmlSerializer.xml;.Xml.XPath.XDocument.xml;.Xml.XPath.xml"
           },
           "ref/netcoreapp2.0/WindowsBase.dll": {},
           "ref/netcoreapp2.0/mscorlib.dll": {},
@@ -6813,37 +6813,44 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Lenovo\\.nuget\\packages\\": {}
+    "C:\\Users\\Calal.Xaliqov\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\DevExpress 21.1\\Components\\Offline Packages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lenovo\\Desktop\\AuthApi\\authapi\\authapi.csproj",
+      "projectUniqueName": "C:\\Users\\Calal.Xaliqov\\Desktop\\AuthApi\\authapi\\authapi.csproj",
       "projectName": "authapi",
-      "projectPath": "C:\\Users\\Lenovo\\Desktop\\AuthApi\\authapi\\authapi.csproj",
-      "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lenovo\\Desktop\\AuthApi\\authapi\\obj\\",
+      "projectPath": "C:\\Users\\Calal.Xaliqov\\Desktop\\AuthApi\\authapi\\authapi.csproj",
+      "packagesPath": "C:\\Users\\Calal.Xaliqov\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Calal.Xaliqov\\Desktop\\AuthApi\\authapi\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\DevExpress 21.1\\Components\\Offline Packages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Calal.Xaliqov\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 21.1.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\DevExpress 21.1\\Components\\System\\Components\\Packages": {},
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "http://10.10.10.144:5000/v3/index.json": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Lenovo\\Desktop\\AuthApi\\authapi.data\\authapi.data.csproj": {
-              "projectPath": "C:\\Users\\Lenovo\\Desktop\\AuthApi\\authapi.data\\authapi.data.csproj"
+            "C:\\Users\\Calal.Xaliqov\\Desktop\\AuthApi\\authapi.data\\authapi.data.csproj": {
+              "projectPath": "C:\\Users\\Calal.Xaliqov\\Desktop\\AuthApi\\authapi.data\\authapi.data.csproj"
             },
-            "C:\\Users\\Lenovo\\Desktop\\AuthApi\\authapi.entity\\authapi.entity.csproj": {
-              "projectPath": "C:\\Users\\Lenovo\\Desktop\\AuthApi\\authapi.entity\\authapi.entity.csproj"
+            "C:\\Users\\Calal.Xaliqov\\Desktop\\AuthApi\\authapi.entity\\authapi.entity.csproj": {
+              "projectPath": "C:\\Users\\Calal.Xaliqov\\Desktop\\AuthApi\\authapi.entity\\authapi.entity.csproj"
             }
           }
         }
@@ -6910,8 +6917,16 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://10.10.10.144:5000/v3/index.json'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+    }
+  ]
 }

@@ -71,7 +71,32 @@ namespace authapi.Controllers
                     await _signInManager.SignOutAsync();
                     Microsoft.AspNetCore.Identity.SignInResult result = await _signInManager.PasswordSignInAsync(user, model.password, model.persistent, model.islocked);
                     if (result.Succeeded)
-                        return Redirect(TempData["returnUrl"].ToString());
+                    {
+                        await _userManager.ResetAccessFailedCountAsync(user);
+                        if(string.IsNullOrEmpty(TempData["returnUrl"]!=null?TempData["returnUrl"].ToString():""))
+                            return Redirect(TempData["returnUrl"].ToString());
+                    }
+                    else
+                    {
+                        await _userManager.AccessFailedAsync(user);
+                        int failCount=await _userManager.GetAccessFailedCountAsync(user);
+                        if(failCount>=3)
+                        {
+                            await _userManager.SetLockoutEndDateAsync(user,new DateTimeOffset(DateTime.Now.AddMinutes(1)));
+                            ModelState.AddModelError("","");
+                        }
+                        else
+                        {
+                            if(result.IsLockedOut)
+                            {
+                                ModelState.AddModelError("","3 yanlış giriş etdiyiniz üçün hesabınız 1 dəqiqə müddətində bağlıdır!");
+                            }
+                            else
+                            {
+                                ModelState.AddModelError("","İstifadəçi adı və ya şifrə yanlışdır!");
+                            }
+                        }
+                    }
                 }
                 else
                 {
