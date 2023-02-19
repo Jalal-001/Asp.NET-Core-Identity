@@ -5,6 +5,7 @@ using authapi.entity;
 using authapi.Models.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,10 +21,11 @@ builder.Services.AddIdentity<AppUser, AppRole>(o =>
     o.Password.RequireUppercase = false;
     o.Password.RequireLowercase = false;
     o.Password.RequireNonAlphanumeric = false;
-}).AddPasswordValidator<CustomPasswordValidation>()
-.AddUserValidator<CustomUserValidation>()
-.AddErrorDescriber<CustomIdentityErrorDescriber>()
-.AddEntityFrameworkStores<AuthContextIdentity>();
+}).AddPasswordValidator<CustomPasswordValidation>() //Custom Password Validation
+.AddUserValidator<CustomUserValidation>() //Custom User Validation
+.AddErrorDescriber<CustomIdentityErrorDescriber>() //Custom Error describer
+.AddEntityFrameworkStores<AuthContextIdentity>()
+.AddDefaultTokenProviders(); //For using forgot password 
 
 builder.Services.AddMvc();
 
@@ -44,10 +46,6 @@ builder.Services.ConfigureApplicationCookie(c =>
     c.Cookie.MaxAge = TimeSpan.FromMinutes(3);
     // c.ExpireTimeSpan = TimeSpan.FromMinutes(3);
 });
-
-
-
-
 
 
 

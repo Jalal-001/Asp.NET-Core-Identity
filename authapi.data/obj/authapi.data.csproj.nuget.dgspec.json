@@ -1,41 +1,35 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Calal.Xaliqov\\Desktop\\AuthApi\\authapi.data\\authapi.data.csproj": {}
+    "C:\\Users\\Lenovo\\Desktop\\AuthApi\\authapi.data\\authapi.data.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Calal.Xaliqov\\Desktop\\AuthApi\\authapi.data\\authapi.data.csproj": {
+    "C:\\Users\\Lenovo\\Desktop\\AuthApi\\authapi.data\\authapi.data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Calal.Xaliqov\\Desktop\\AuthApi\\authapi.data\\authapi.data.csproj",
+        "projectUniqueName": "C:\\Users\\Lenovo\\Desktop\\AuthApi\\authapi.data\\authapi.data.csproj",
         "projectName": "authapi.data",
-        "projectPath": "C:\\Users\\Calal.Xaliqov\\Desktop\\AuthApi\\authapi.data\\authapi.data.csproj",
-        "packagesPath": "C:\\Users\\Calal.Xaliqov\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Calal.Xaliqov\\Desktop\\AuthApi\\authapi.data\\obj\\",
+        "projectPath": "C:\\Users\\Lenovo\\Desktop\\AuthApi\\authapi.data\\authapi.data.csproj",
+        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Lenovo\\Desktop\\AuthApi\\authapi.data\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\DevExpress 21.1\\Components\\Offline Packages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Calal.Xaliqov\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 21.1.config",
+          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\DevExpress 21.1\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "http://10.10.10.144:5000/v3/index.json": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Calal.Xaliqov\\Desktop\\AuthApi\\authapi.entity\\authapi.entity.csproj": {
-                "projectPath": "C:\\Users\\Calal.Xaliqov\\Desktop\\AuthApi\\authapi.entity\\authapi.entity.csproj"
+              "C:\\Users\\Lenovo\\Desktop\\AuthApi\\authapi.entity\\authapi.entity.csproj": {
+                "projectPath": "C:\\Users\\Lenovo\\Desktop\\AuthApi\\authapi.entity\\authapi.entity.csproj"
               }
             }
           }
@@ -91,34 +85,28 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Calal.Xaliqov\\Desktop\\AuthApi\\authapi.entity\\authapi.entity.csproj": {
+    "C:\\Users\\Lenovo\\Desktop\\AuthApi\\authapi.entity\\authapi.entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Calal.Xaliqov\\Desktop\\AuthApi\\authapi.entity\\authapi.entity.csproj",
+        "projectUniqueName": "C:\\Users\\Lenovo\\Desktop\\AuthApi\\authapi.entity\\authapi.entity.csproj",
         "projectName": "authapi.entity",
-        "projectPath": "C:\\Users\\Calal.Xaliqov\\Desktop\\AuthApi\\authapi.entity\\authapi.entity.csproj",
-        "packagesPath": "C:\\Users\\Calal.Xaliqov\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Calal.Xaliqov\\Desktop\\AuthApi\\authapi.entity\\obj\\",
+        "projectPath": "C:\\Users\\Lenovo\\Desktop\\AuthApi\\authapi.entity\\authapi.entity.csproj",
+        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Lenovo\\Desktop\\AuthApi\\authapi.entity\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\DevExpress 21.1\\Components\\Offline Packages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Calal.Xaliqov\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 21.1.config",
+          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\DevExpress 21.1\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "http://10.10.10.144:5000/v3/index.json": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -178,7 +166,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

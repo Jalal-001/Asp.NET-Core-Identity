@@ -1,9 +1,12 @@
+using System.Net.Mail;
 using System;
 using authapi.entity;
 using authapi.Models.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.Web;
+using System.Net;
 
 namespace authapi.Controllers
 {
@@ -54,7 +57,7 @@ namespace authapi.Controllers
         }
 
         [HttpGet]
-        public IActionResult Login(string returnUrl)
+        public IActionResult Login(string? returnUrl)
         {
             TempData["returnUrl"] = returnUrl;
             return View();
@@ -73,27 +76,26 @@ namespace authapi.Controllers
                     if (result.Succeeded)
                     {
                         await _userManager.ResetAccessFailedCountAsync(user);
-                        if(string.IsNullOrEmpty(TempData["returnUrl"]!=null?TempData["returnUrl"].ToString():""))
-                            return Redirect(TempData["returnUrl"].ToString());
+                        return Redirect(TempData["returnUrl"].ToString());
                     }
                     else
                     {
                         await _userManager.AccessFailedAsync(user);
-                        int failCount=await _userManager.GetAccessFailedCountAsync(user);
-                        if(failCount>=3)
+                        int failCount = await _userManager.GetAccessFailedCountAsync(user);
+                        if (failCount >= 3)
                         {
-                            await _userManager.SetLockoutEndDateAsync(user,new DateTimeOffset(DateTime.Now.AddMinutes(1)));
-                            ModelState.AddModelError("","");
+                            await _userManager.SetLockoutEndDateAsync(user, new DateTimeOffset(DateTime.Now.AddMinutes(1)));
+                            ModelState.AddModelError("Xəta", "3 yanlış giriş etdiniz!");
                         }
                         else
                         {
-                            if(result.IsLockedOut)
+                            if (result.IsLockedOut)
                             {
-                                ModelState.AddModelError("","3 yanlış giriş etdiyiniz üçün hesabınız 1 dəqiqə müddətində bağlıdır!");
+                                ModelState.AddModelError("Xəta", "3 yanlış giriş etdiyiniz üçün hesabınız 1 dəqiqə müddətində bağlıdır!");
                             }
                             else
                             {
-                                ModelState.AddModelError("","İstifadəçi adı və ya şifrə yanlışdır!");
+                                ModelState.AddModelError("Xəta", "İstifadəçi adı və ya şifrə yanlışdır!");
                             }
                         }
                     }
@@ -111,7 +113,44 @@ namespace authapi.Controllers
         public async Task<IActionResult> Logout()
         {
             await _signInManager.SignOutAsync();
-            return View(TempData["returnUrl"].ToString());
+            return Redirect("/User/Index");
+        }
+
+        [HttpGet]
+        public async Task<IActionResult>ResetPassword()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult>ResetPassword(ResetPasswordViewModel model)
+        {
+            AppUser user=await _userManager.FindByEmailAsync(model.Email);
+            if(user!=null)
+            {
+                string resetToken=await _userManager.GeneratePasswordResetTokenAsync(user);
+
+                MailMessage mail=new MailMessage();
+                mail.IsBodyHtml=true;
+                mail.To.Add(user.Email);
+                mail.From=new MailAddress("","ResetPassword",System.Text.Encoding.UTF8);
+                mail.Subject="Reset Password";
+                mail.Body=$"<a target=\"_blank\" href=\"https://localhost:5001{Url.Action("ResetPassword", "User", new { userId = user.Id, token = HttpUtility.UrlEncode(resetToken) })}\">Click here!</a>";
+                mail.IsBodyHtml=true;
+                SmtpClient smtp=new SmtpClient();
+                smtp.Credentials=new NetworkCredential("","");
+                smtp.Port=587;
+                smtp.Host="smtp.gmail.com";
+                smtp.EnableSsl=true;
+                smtp.Send(mail);
+
+                ViewBag.State=true;
+            }
+            else
+            {
+                ViewBag.State=false;
+            }
+            return View();
         }
     }
 }
