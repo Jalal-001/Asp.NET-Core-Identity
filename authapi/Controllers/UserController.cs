@@ -117,39 +117,61 @@ namespace authapi.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult>ResetPassword()
+        public async Task<IActionResult> ResetPassword()
         {
             return View();
         }
 
         [HttpPost]
-        public async Task<IActionResult>ResetPassword(ResetPasswordViewModel model)
+        public async Task<IActionResult> ResetPassword(ResetPasswordViewModel model)
         {
-            AppUser user=await _userManager.FindByEmailAsync(model.Email);
-            if(user!=null)
+            AppUser user = await _userManager.FindByEmailAsync(model.Email);
+            if (user != null)
             {
-                string resetToken=await _userManager.GeneratePasswordResetTokenAsync(user);
+                string resetToken = await _userManager.GeneratePasswordResetTokenAsync(user);
 
-                MailMessage mail=new MailMessage();
-                mail.IsBodyHtml=true;
+                MailMessage mail = new MailMessage();
+                mail.IsBodyHtml = true;
                 mail.To.Add(user.Email);
-                mail.From=new MailAddress("","ResetPassword",System.Text.Encoding.UTF8);
-                mail.Subject="Reset Password";
-                mail.Body=$"<a target=\"_blank\" href=\"https://localhost:5001{Url.Action("ResetPassword", "User", new { userId = user.Id, token = HttpUtility.UrlEncode(resetToken) })}\">Click here!</a>";
-                mail.IsBodyHtml=true;
-                SmtpClient smtp=new SmtpClient();
-                smtp.Credentials=new NetworkCredential("","");
-                smtp.Port=587;
-                smtp.Host="smtp.gmail.com";
-                smtp.EnableSsl=true;
+                mail.From = new MailAddress("khaligovjalal@gmail.com", "ResetPassword", System.Text.Encoding.UTF8);
+                mail.Subject = "Reset Password";
+                mail.Body = $"<a target=\"_blank\" href=\"https://localhost:5001{Url.Action("ResetPassword", "User", new { userId = user.Id, token = HttpUtility.UrlEncode(resetToken) })}\">Click here!</a>";
+                mail.IsBodyHtml = true;
+                SmtpClient smtp = new SmtpClient();
+                smtp.UseDefaultCredentials = false;
+                smtp.Credentials = new NetworkCredential("khaligovjalal@gmail.com", "Khaligov@1890");
+                smtp.Port = 587;
+                smtp.Host = "smtp.gmail.com";
+                smtp.EnableSsl = true;
                 smtp.Send(mail);
 
-                ViewBag.State=true;
+                ViewBag.State = true;
             }
             else
             {
-                ViewBag.State=false;
+                ViewBag.State = false;
             }
+            return View();
+        }
+
+        [HttpGet("[action]/{userId}/{token}")]
+        public async Task<IActionResult> UpdatePassword()
+        {
+            return View();
+        }
+
+        [HttpPost("[action]/{userId}/{token}")]
+        public async Task<IActionResult> UpdatePassword(UpdatePasswordViewModel model, string userId, string token)
+        {
+            AppUser user = await _userManager.FindByIdAsync(userId);
+            IdentityResult result = await _userManager.ResetPasswordAsync(user, HttpUtility.UrlDecode(token), model.Password);
+            if (result.Succeeded)
+            {
+                ViewBag.State = true;
+                await _userManager.UpdateSecurityStampAsync(user);
+            }
+            else
+                ViewBag.State = false;
             return View();
         }
     }
