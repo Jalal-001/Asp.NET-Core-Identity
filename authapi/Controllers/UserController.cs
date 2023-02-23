@@ -139,12 +139,13 @@ namespace authapi.Controllers
                 mail.IsBodyHtml = true;
                 SmtpClient smtp = new SmtpClient();
                 smtp.UseDefaultCredentials = false;
+                smtp.DeliveryMethod=SmtpDeliveryMethod.Network;
                 smtp.Credentials = new NetworkCredential("khaligovjalal@gmail.com", "Khaligov@1890");
                 smtp.Port = 587;
-                smtp.Host = "smtp.gmail.com";
+                smtp.Host = "smtp.google.com";
                 smtp.EnableSsl = true;
                 smtp.Send(mail);
-
+               
                 ViewBag.State = true;
             }
             else
