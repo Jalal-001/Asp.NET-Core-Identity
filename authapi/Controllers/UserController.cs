@@ -1,5 +1,4 @@
 using System.Net.Mail;
-using System;
 using authapi.entity;
 using authapi.Models.ViewModels;
 using Microsoft.AspNetCore.Authorization;
@@ -31,13 +30,13 @@ namespace authapi.Controllers
         }
 
         [HttpGet]
-        public IActionResult SignIn()
+        public IActionResult SignUp()
         {
             return View();
         }
 
         [HttpPost]
-        public async Task<IActionResult> SignIn(AppUserViewModel model)
+        public async Task<IActionResult> SignUp(AppUserViewModel model)
         {
             if (ModelState.IsValid)
             {
@@ -116,6 +115,9 @@ namespace authapi.Controllers
             return Redirect("/User/Index");
         }
 
+        #region 
+        // Password-un update olunmasinda problem var.Yeniden bax
+
         [HttpGet]
         public async Task<IActionResult> ResetPassword()
         {
@@ -133,19 +135,18 @@ namespace authapi.Controllers
                 MailMessage mail = new MailMessage();
                 mail.IsBodyHtml = true;
                 mail.To.Add(user.Email);
-                mail.From = new MailAddress("khaligovjalal@gmail.com", "ResetPassword", System.Text.Encoding.UTF8);
+                mail.From = new MailAddress("**TestMest1122@outlook.com**", "ResetPassword", System.Text.Encoding.UTF8);
                 mail.Subject = "Reset Password";
-                mail.Body = $"<a target=\"_blank\" href=\"https://localhost:5001{Url.Action("ResetPassword", "User", new { userId = user.Id, token = HttpUtility.UrlEncode(resetToken) })}\">Click here!</a>";
+                mail.Body = $"<a target=\"_blank\" href=\"https://localhost:5001{Url.Action("UpdatePassword", "Password", new { userId = user.Id, token = HttpUtility.UrlEncode(resetToken) })}\">Click here!</a>";
+
                 mail.IsBodyHtml = true;
                 SmtpClient smtp = new SmtpClient();
-                smtp.UseDefaultCredentials = false;
-                smtp.DeliveryMethod=SmtpDeliveryMethod.Network;
-                smtp.Credentials = new NetworkCredential("khaligovjalal@gmail.com", "");
+                smtp.Credentials = new NetworkCredential("**TestMest1122@outlook.com**", "**Testmest@1122**");
                 smtp.Port = 587;
-                smtp.Host = "smtp.google.com";
+                smtp.Host = "smtp.office365.com";
                 smtp.EnableSsl = true;
                 smtp.Send(mail);
-               
+
                 ViewBag.State = true;
             }
             else
@@ -174,6 +175,35 @@ namespace authapi.Controllers
             else
                 ViewBag.State = false;
             return View();
+        }
+        #endregion
+
+        [HttpGet]
+        public async Task<IActionResult> EditProfile()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> EditProfile(EditProfileModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = await _userManager.FindByNameAsync(User.Identity.Name);
+                user.UserName = model.UserName;
+                IdentityResult result = await _userManager.UpdateAsync(user);
+                if (!result.Succeeded)
+                {
+                    result.Errors.ToList().ForEach(x => ModelState.AddModelError(x.Code, x.Description));
+                    return View(model);
+                }
+                await _userManager.UpdateSecurityStampAsync(user);
+                await _signInManager.SignOutAsync();
+                await _signInManager.SignInAsync(user, true);
+            }
+            return RedirectToAction("Index");
+
+
         }
     }
 }

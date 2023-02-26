@@ -1,0 +1,9 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\authapi",
+    "\\EmailServices"
+  ],
+  "SelectedNode": "\\EmailServices\\SmtpEmailSender.cs",
+  "PreviewInSolutionExplorer": false
+}
