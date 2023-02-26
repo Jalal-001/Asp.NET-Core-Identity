@@ -140,7 +140,7 @@ namespace authapi.Controllers
                 SmtpClient smtp = new SmtpClient();
                 smtp.UseDefaultCredentials = false;
                 smtp.DeliveryMethod=SmtpDeliveryMethod.Network;
-                smtp.Credentials = new NetworkCredential("khaligovjalal@gmail.com", "Khaligov@1890");
+                smtp.Credentials = new NetworkCredential("khaligovjalal@gmail.com", "");
                 smtp.Port = 587;
                 smtp.Host = "smtp.google.com";
                 smtp.EnableSsl = true;
