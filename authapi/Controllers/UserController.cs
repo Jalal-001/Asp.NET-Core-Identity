@@ -203,5 +203,33 @@ namespace authapi.Controllers
             }
             return RedirectToAction("Index");
         }
+
+        [HttpGet]
+        public async Task<IActionResult> EditPassword()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> EditPassword(EditPasswordModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = await _userManager.FindByNameAsync(User.Identity.Name);
+                if (await _userManager.CheckPasswordAsync(user, model.OldPassword))
+                {
+                    var result = await _userManager.ChangePasswordAsync(user, model.OldPassword, model.NewPassword);
+                    if (!result.Succeeded)
+                    {
+                        result.Errors.ToList().ForEach(e => ModelState.AddModelError(e.Code, e.Description));
+                        return View(model);
+                    }
+                    await _userManager.UpdateSecurityStampAsync(user);
+                    await _signInManager.SignOutAsync();
+                    await _signInManager.SignInAsync(user, true);
+                }
+            }
+            return RedirectToAction("Index");
+        }
     }
 }
