@@ -202,8 +202,6 @@ namespace authapi.Controllers
                 await _signInManager.SignInAsync(user, true);
             }
             return RedirectToAction("Index");
-
-
         }
     }
 }

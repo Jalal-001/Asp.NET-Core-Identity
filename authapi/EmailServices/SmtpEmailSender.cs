@@ -28,9 +28,5 @@ namespace EmailServices
 
             return client.SendMailAsync(new MailMessage(_userName,email,subject,htmlMessage){IsBodyHtml=true});
         }
-
-
-
-
     }
 }
