@@ -132,21 +132,21 @@ namespace authapi.Controllers
             {
                 string resetToken = await _userManager.GeneratePasswordResetTokenAsync(user);
 
+                SmtpClient client = new SmtpClient();
+                client.UseDefaultCredentials = false;
+                client.Credentials = new System.Net.NetworkCredential("TestMest1122@outlook.com", "Testmest@1122");
+                client.Port = 587; // 25 587
+                client.Host = "smtp.office365.com";
+                client.DeliveryMethod = SmtpDeliveryMethod.Network;
+                client.EnableSsl = true;
+
                 MailMessage mail = new MailMessage();
-                mail.IsBodyHtml = true;
-                mail.To.Add(user.Email);
-                mail.From = new MailAddress("**TestMest1122@outlook.com**", "ResetPassword", System.Text.Encoding.UTF8);
-                mail.Subject = "Reset Password";
-                mail.Body = $"<a target=\"_blank\" href=\"https://localhost:5001{Url.Action("UpdatePassword", "Password", new { userId = user.Id, token = HttpUtility.UrlEncode(resetToken) })}\">Click here!</a>";
+                mail.From = new MailAddress("TestMest1122@outlook.com", "ResetPassword");
+                mail.To.Add(new MailAddress(model.Email));
+                mail.Subject = "Reset password";
+                mail.Body = $"<a target=\"_blank\" href=\"https://localhost:5001{Url.Action("UpdatePassword", "Password", new { userId = user.Id, token = HttpUtility.UrlEncode(resetToken) })}\">Click here!</a>".ToString();
 
-                mail.IsBodyHtml = true;
-                SmtpClient smtp = new SmtpClient();
-                smtp.Credentials = new NetworkCredential("**TestMest1122@outlook.com**", "**Testmest@1122**");
-                smtp.Port = 587;
-                smtp.Host = "smtp.office365.com";
-                smtp.EnableSsl = true;
-                smtp.Send(mail);
-
+                client.Send(mail);
                 ViewBag.State = true;
             }
             else
